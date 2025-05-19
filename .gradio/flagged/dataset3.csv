@@ -1,0 +1,18 @@
+Código SAS,Lenguaje de destino,Código traducido,timestamp
+"       proc import datafile=""default_of_credit_card_clients.csv""
+            out=class_data
+            dbms=csv
+            replace;
+            getnames=yes;
+        run;
+        
+        data adultos;
+          set class_data;
+          where AGE >= 18;
+        run;
+        
+        PROC EXPORT DATA= adultos
+            OUTFILE=""output.csv""
+            DBMS=CSV
+            REPLACE;
+        RUN;",Python,,2025-05-19 07:34:28.056762

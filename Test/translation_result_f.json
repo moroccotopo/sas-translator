@@ -1,0 +1,16 @@
+{
+"description": "The SAS code is defining a macro that filters a dataset 'sashelp.class' to keep only the records where 'age' is greater than 13. It then keeps only the 'name', 'age', and 'height' columns. The Python code will do the same using the pandas library.",
+
+"code": "
+
+import pandas as pd
+
+def example():
+    # Assuming 'sashelp.class' is a csv file
+    df = pd.read_csv('sashelp.class.csv')
+    filtered = df[df['age'] > 13][['name', 'age', 'height']]
+    return filtered
+
+filtered_df = example()
+"
+}

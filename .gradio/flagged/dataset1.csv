@@ -1,0 +1,11 @@
+Código SAS,Lenguaje de destino,output,timestamp
+"   %macro example();
+      data filtered;
+        set sashelp.class;
+        where age > 13;
+        keep name age height;
+      run;
+    %mend example;
+    %example;",,"Traducido a None:
+
+(código traducido simulado)",2025-05-18 16:04:54.656417

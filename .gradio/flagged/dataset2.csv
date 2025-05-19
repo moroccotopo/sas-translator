@@ -1,0 +1,9 @@
+Código SAS,Lenguaje de destino,Resultado,timestamp
+"  %macro example();
+      data filtered;
+        set sashelp.class;
+        where age > 13;
+        keep name age height;
+      run;
+    %mend example;
+    %example;",Python,✅ Traducción completada a Python. Ver archivos generados.,2025-05-18 16:11:19.858993
